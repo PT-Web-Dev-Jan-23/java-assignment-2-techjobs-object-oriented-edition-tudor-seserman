@@ -102,17 +102,16 @@ public class Job {
 
     @Override
     public String toString() {
-//        String name = (this.name.equals(""))? "Data not available":this.name;
-//        String employer = (this.employer.getValue().equals(""))? "Data not available":this.employer.getValue();
-//        String location = (this.location.getValue().equals(""))? "Data not available":this.location.getValue();
-//        String positionType = (this.positionType.getValue().equals(""))? "Data not available":this.positionType.getValue();
-//        String coreCompetency = (this.coreCompetency.getValue().equals(""))? "Data not available":this.coreCompetency.getValue();
-
-        if(name.equals("Data not available") && employer.toString().equals("Data not available") && location.toString().equals("Data not available") && positionType.toString().equals("Data not available") && coreCompetency.toString().equals("Data not available")){
+        String iLikeDRY = "Data not available";
+        if(name.equals(iLikeDRY)
+                && employer.toString().equals(iLikeDRY)
+                && location.toString().equals(iLikeDRY)
+                && positionType.toString().equals(iLikeDRY)
+                && coreCompetency.toString().equals(iLikeDRY)) {
             return "OOPS! This job does not seem to exist.";
         }
         return
-                "\nID: " + this.id +"\n" +
+                "\nID: " + id +"\n" +
                 "Name: " + name + "\n" +
                 "Employer: " + employer + "\n"+
                 "Location: " + location + "\n"+
